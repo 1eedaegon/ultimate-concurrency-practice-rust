@@ -19,7 +19,7 @@ Programming](https://cs.ipm.ac.ir/asoc2016/Resources/Theartofmulticore.pdf)를 �
 택배 발송 프로세스는 특정한 시점에 그 과정의 일부만 존재한다.
 
 
-프로세스는 어떤 과정에 적용할 수 있지만 우리는 컴퓨터과학을 다루기 때문에 계산 실행 주체로써 정의를 해보자.
+프로세스를 어떤 과정에 대입할 수 있지만 우리는 컴퓨터과학을 다루기 때문에 계산 실행 주체로써 정의를 해보자.
 
 프로세스는 계산을 실행하는 주체로써 4가지 상태전이로 이뤄진다.
 
@@ -34,7 +34,7 @@ Programming](https://cs.ipm.ac.ir/asoc2016/Resources/Theartofmulticore.pdf)를 �
 계산의 대상인 데이터를 기다리거나, 계산에 필요한 리소스를 확보하거나, 타이머 같이 자발적 대기로 전환할 수 있다.
 자발적인 대기 상태는 장기적인 프로세스지만 현재에 아무것도 하지 않아서 대기 상태로 전환하는 것도 포함한다.
 
-OS에서 이야기하는 process는 위의 process를 구현한 구현체로,[linux의 struct task_struct;](https://github.com/torvalds/linux/blob/master/include/linux/sched/task.h)나 [windows의 struct EPROCESS;](https://github.com/torvalds/linux/blob/master/include/linux/sched/task.h), [MacOS(darwin)의 struct proc;](https://opensource.apple.com/source/xnu/xnu-2422.1.72/bsd/sys/proc_internal.h) 같은 구조체로 정의된다.
+OS에서 이야기하는 process는 위의 process를 구현한 구현체로, [linux의 struct task_struct](https://github.com/torvalds/linux/blob/master/include/linux/sched/task.h)나 [windows의 struct EPROCESS](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/eprocess#eprocess) 혹은 [MacOS(darwin)의 struct proc](https://opensource.apple.com/source/xnu/xnu-2422.1.72/bsd/sys/proc_internal.h) 같은 구조체로 정의된다.
 
 실제를 알기 전엔 거대한 무언가 있을 것이라 생각해서 무척 허무할텐데... 진실은 항상 간단하고 명료한 법이다
 
